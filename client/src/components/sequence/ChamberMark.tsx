@@ -2,6 +2,5 @@
 import { Link } from "wouter";
 
 export function ChamberMark({ compact = false }: { compact?: boolean }) {
-  return <Link href="/" className={`chamber-mark ${compact ? "chamber-mark--compact" : ""}`} aria-label="Series Directoryへ戻る"><img src="/manus-storage/chamber-mark_b902f5d0.png" alt="" />{!compact && <span>WATANABE3TI<br />SERIES DIRECTORY</span>}</Link>;
+  return <Link href="/" className={`chamber-mark ${compact ? "chamber-mark--compact" : ""}`} aria-label="memory-chamberの索引へ戻る"><img src="/manus-storage/chamber-mark_b902f5d0.png" alt="" />{!compact && <span>memory-chamber<br />ARCHIVE DIRECTORY</span>}</Link>;
 }
-

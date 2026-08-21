@@ -17,7 +17,7 @@ export default function StructureExpression() {
   return (
     <ExpressionShell expression={expression}>
       <section className="structure-expression">
-        <div className="structure-expression__intro"><p className="eyebrow">{expression.eyebrow}</p><h1>ROOT.<br />TRUNK.<br /><em>BRANCH.</em></h1><p>001 is a single archive, but its inner logic can be read as a growing organism. Select a node to reveal what it holds.</p></div>
+        <div className="structure-expression__intro"><p className="eyebrow">memory-chamber / {expression.eyebrow}</p><h1>memory-<br /><em>chamber.</em></h1><p className="expression-view-title">ROOT. TRUNK. BRANCH.</p><p>001 is a single archive, but its inner logic can be read as a growing organism. Select a node to reveal what it holds.</p></div>
         <div className="tree-stage" aria-label="001の根・幹・枝サイトマップ">
           <svg className="tree-stage__lines" viewBox="0 0 1000 680" preserveAspectRatio="none" aria-hidden="true">
             <path d="M500,520 C500,430 350,410 270,340 M500,520 C500,420 500,370 500,280 M500,520 C500,430 650,410 730,340" />
@@ -35,4 +35,3 @@ export default function StructureExpression() {
     </ExpressionShell>
   );
 }
-

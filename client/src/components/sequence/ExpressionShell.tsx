@@ -12,7 +12,7 @@ export function ExpressionShell({ expression, children }: { expression: Expressi
     <main className={`expression-shell expression-shell--${expression.id}`}>
       <header className="expression-shell__header">
         <ChamberMark />
-        <div className="expression-shell__meta"><span>SERIES 001 / MEMORY CHAMBER</span><span>VIEW {expression.label} OF 04</span></div>
+        <div className="expression-shell__meta"><span>memory-chamber / SERIES 001</span><span>VIEW {expression.label} OF 04</span></div>
       </header>
       <nav className="expression-switcher" aria-label="001の別表現を選択">
         <span className="expression-switcher__title"><Layers3 size={14} /> 001 VIEWS</span>
@@ -30,4 +30,3 @@ export function ExpressionShell({ expression, children }: { expression: Expressi
 }
 
 export function expressionClass(id: ExpressionKind) { return `expression-shell--${id}`; }
-

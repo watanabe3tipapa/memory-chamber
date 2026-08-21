@@ -25,7 +25,7 @@ export type Series = {
 export const series: Series[] = [
   {
     id: "001",
-    title: "MEMORY CHAMBER",
+    title: "memory-chamber",
     subtitle: "Four views of one working archive",
     description: "The original environment can be entered through four distinct interfaces: desktop, structure, map, and construction order.",
     status: "open",
@@ -83,4 +83,3 @@ export const constructionOrder = [
   { order: "04", title: "HORIZON BRANCH", status: "OPEN", note: "Other systems and external links extend the chamber beyond the original desktop." },
   { order: "05", title: "NEXT VERIFIED DATE", status: "UNSTAMPED", note: "Replace this editorial order with a confirmed creation date when the source record is available." },
 ];
-

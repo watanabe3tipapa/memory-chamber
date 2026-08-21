@@ -9,9 +9,8 @@ export default function FutureSeries({ currentSeries }: { currentSeries: Series 
     <main className={`future-series future-series--${currentSeries.accent}`}>
       <div className="future-series__image" style={{ backgroundImage: `url(${currentSeries.image})` }} />
       <header className="future-series__header"><ChamberMark /><Link href="/"><ArrowLeft size={15} /> ALL SERIES</Link></header>
-      <section className="future-series__body"><p className="eyebrow">SERIES {currentSeries.id} / GROWING</p><h1>{currentSeries.title}</h1><p className="future-series__subtitle">{currentSeries.subtitle}</p><p className="future-series__copy">{currentSeries.description}</p><div className="future-series__construction"><FolderPlus size={20} /><div><strong>ROOMS NOT YET BUILT</strong><span>When the material arrives, add its views here: desktop, structure, map, timeline, or another form entirely.</span></div></div></section>
+      <section className="future-series__body"><p className="eyebrow">memory-chamber / SERIES {currentSeries.id} / GROWING</p><h1>memory-<br />chamber.</h1><p className="future-series__subtitle">{currentSeries.title} — {currentSeries.subtitle}</p><p className="future-series__copy">{currentSeries.description}</p><div className="future-series__construction"><FolderPlus size={20} /><div><strong>ROOMS NOT YET BUILT</strong><span>When the material arrives, add its views here: desktop, structure, map, timeline, or another form entirely.</span></div></div></section>
       <footer className="future-series__footer"><Layers3 size={15} /> SERIES {currentSeries.id} WILL HOLD ITS OWN EXPRESSIONS.</footer>
     </main>
   );
 }
-

@@ -9,8 +9,7 @@ export default function Chapter001() {
   if (!expression) return null;
   return (
     <ExpressionShell expression={expression}>
-      <section className="desktop-expression"><div className="desktop-expression__intro"><p className="eyebrow">{expression.eyebrow}</p><h1>DESKTOP<br /><em>AS A DOOR.</em></h1><p>A preserved operating environment remains the original way to enter 001. The same archive can be read elsewhere as a tree, map, or construction trace.</p><a href="#desktop">ENTER DESKTOP <ArrowDown size={15} /></a></div><div id="desktop" className="desktop-expression__stage"><DesktopChamber /></div></section>
+      <section className="desktop-expression"><div className="desktop-expression__intro"><p className="eyebrow">memory-chamber / {expression.eyebrow}</p><h1>memory-<br /><em>chamber.</em></h1><p className="expression-view-title">DESKTOP AS A DOOR.</p><p>A preserved operating environment remains the original way to enter 001. The same archive can be read elsewhere as a tree, map, or construction trace.</p><a href="#desktop">ENTER DESKTOP <ArrowDown size={15} /></a></div><div id="desktop" className="desktop-expression__stage"><DesktopChamber /></div></section>
     </ExpressionShell>
   );
 }
-

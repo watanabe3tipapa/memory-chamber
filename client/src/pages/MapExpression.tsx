@@ -12,7 +12,7 @@ export default function MapExpression() {
   return (
     <ExpressionShell expression={expression}>
       <section className="map-expression">
-        <div className="map-expression__intro"><p className="eyebrow">{expression.eyebrow}</p><h1>THE LITTLE<br /><em>COUNTRY OF 001.</em></h1><p>Every corner is placed in an invented territory. Choose a hand-drawn pin to read what lives there.</p></div>
+        <div className="map-expression__intro"><p className="eyebrow">memory-chamber / {expression.eyebrow}</p><h1>memory-<br /><em>chamber.</em></h1><p className="expression-view-title">THE LITTLE COUNTRY OF 001.</p><p>Every corner is placed in an invented territory. Choose a hand-drawn pin to read what lives there.</p></div>
         <div className="fantasy-map" style={{ backgroundImage: `url(${expression.image})` }} aria-label="001の架空地図">
           {mapPins.map((pin) => <button key={pin.id} type="button" className={`map-pin ${selectedId === pin.id ? "is-selected" : ""}`} style={{ left: `${pin.x}%`, top: `${pin.y}%` }} onClick={() => setSelectedId(pin.id)}><span>✦</span><small>{pin.name}</small></button>)}
           <aside className="map-card" aria-live="polite"><p><MapPinned size={14} /> {selected.category}</p><h2>{selected.name}</h2><p>{selected.description}</p><span>CONTENT SLOT / READY</span></aside>
@@ -22,4 +22,3 @@ export default function MapExpression() {
     </ExpressionShell>
   );
 }
-

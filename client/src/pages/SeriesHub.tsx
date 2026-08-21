@@ -10,10 +10,10 @@ export default function SeriesHub() {
   return (
     <main className="series-hub">
       <div className="series-hub__image" style={{ backgroundImage: `url(${currentSeries.image})` }} />
-      <header className="series-hub__header"><ChamberMark /><span>SERIES 001 / 04 EXPRESSIONS</span></header>
+      <header className="series-hub__header"><ChamberMark /><span>memory-chamber / SERIES 001 / 04 EXPRESSIONS</span></header>
       <section className="series-hub__intro">
-        <p className="eyebrow">001 / MEMORY CHAMBER</p>
-        <h1>ONE ARCHIVE.<br /><em>FOUR WAYS IN.</em></h1>
+        <p className="eyebrow">memory-chamber / SERIES 001</p>
+        <h1>memory-<br /><em>chamber.</em></h1>
         <p>{currentSeries.description}</p>
       </section>
       <section className="expression-grid" aria-label="001の別表現">
@@ -30,4 +30,3 @@ export default function SeriesHub() {
     </main>
   );
 }
-
