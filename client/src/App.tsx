@@ -1,42 +1,29 @@
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/NotFound";
+/** Series and Expression Directory: シリーズ単位と001内の表現単位を分けてルーティングする。 */
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
-
+import Chapter001 from "./pages/Chapter001";
+import SeriesHub from "./pages/SeriesHub";
+import StructureExpression from "./pages/StructureExpression";
+import MapExpression from "./pages/MapExpression";
+import TimelineExpression from "./pages/TimelineExpression";
+import FutureSeries from "./pages/FutureSeries";
+import { getSeries } from "./data/series";
 
 function Router() {
-  return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
-  );
+  const futureSeries = ["002", "003", "004"].map(getSeries).filter(Boolean);
+  return <Switch>
+    <Route path="/" component={Home} />
+    <Route path="/001" component={SeriesHub} />
+    <Route path="/001/desktop" component={Chapter001} />
+    <Route path="/001/structure" component={StructureExpression} />
+    <Route path="/001/map" component={MapExpression} />
+    <Route path="/001/timeline" component={TimelineExpression} />
+    {futureSeries.map((item) => item && <Route key={item.id} path={`/${item.id}`}>{() => <FutureSeries currentSeries={item} />}</Route>)}
+    <Route component={NotFound} />
+  </Switch>;
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+export default function App() { return <ErrorBoundary><Router /></ErrorBoundary>; }
 
-function App() {
-  return (
-    <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-  );
-}
-
-export default App;
